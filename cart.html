@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Akihabara-ten - My Cart</title>
+
+		<!-- Icon, CSS, Bootstrap -->
+		<link rel="shortcut icon" href="assets/images/logo.png">
+		<link rel="stylesheet" href="assets/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+		<!-- Data JS -->
+		<script>
+			function Delete(e){
+				let items = [];
+				JSON.parse(localStorage.getItem('items')).map(data=>{
+					if(data.id != e.parentElement.parentElement.children[0].textContent){
+						items.push(data);
+					}
+				});
+				localStorage.setItem('items',JSON.stringify(items));
+				window.location.reload();
+			};  
+		</script>
+	</head>
+	<body>
+		<div class="main">
+
+			<!-- Header -->
+			<header id="header" class="header">
+
+				<!-- Logo -->
+				<a href="index.html">秋葉原店</a>
+
+				<!-- Cart Btn -->
+				<div class="iconShopping">
+					<p>0</p>
+					<i class="fa fa-shopping-cart"></i>
+				</div>
+			</header>
+
+			<!-- Main Text -->
+			<div class="notice">
+				<h1>Please double-check your orders then proceed to check-out page.</h1>
+				<!-- Return Btn -->
+				<a href="index.html" class="view2">Return to Home</a>
+			</div>
+
+			<!-- Data -->
+			<div class="cartBox">
+				<div class="cart">
+					<i class="fa fa-close"></i>
+					<h1>Your Cart</h1>
+					<table></table>
+					<a href="checkout.html" class="view">Check-out</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Script -->
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>

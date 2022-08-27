@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Akihabara-ten - My Cart</title>
+
+		<!-- Icon, CSS, Bootstrap -->
+		<link rel="shortcut icon" href="assets/images/logo.png">
+		<link rel="stylesheet" href="assets/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+		<!-- Data JS -->
+		<script>
+			function Delete(e){
+				let items = [];
+				JSON.parse(localStorage.getItem('items')).map(data=>{
+					if(data.id != e.parentElement.parentElement.children[0].textContent){
+						items.push(data);
+					}
+				});
+				localStorage.setItem('items',JSON.stringify(items));
+				window.location.reload();
+			};  
+		</script>
+	</head>
+	<body>
+		<div class="main">
+
+			<!-- Header -->
+			<header id="header" class="header">
+
+				<!-- Logo -->
+				<a href="index.html">秋葉原店</a>
+
+				<!-- Cart Btn -->
+				<div class="iconShopping">
+					<p>0</p>
+					<i class="fa fa-shopping-cart"></i>
+				</div>
+			</header>
+			
+			<!-- Brand Box -->
+			<div class="itemsBox">
+				<div class="box">
+					<div class="slide-img">
+						<h1 class="title">Hololive</h1>
+						<img src="https://pbs.twimg.com/profile_images/1198438854841094144/y35Fe_Jj.jpg" alt="hololive"  class="img"/>
+					</div>
+				</div>
+
+				<!-- Item 1 -->
+				<div class="box">
+					<div class="slide-img">
+						<img src="https://ae01.alicdn.com/kf/Hdcedf4e6560948a0a59f690e1b20f4cf7/Virtual-Youtuber-VTB-Shirakami-Fubuki-Hololive-A04-Tshirt-vtb-fan-box.jpg_q50.jpg" alt="1" class="img"/>
+							<div class="overlay">	
+								<div class="itemInfo">
+									<div class="type">
+										<h1>Virtual Youtuber VTB Shirakami Fubuki Hololive Tshirt vtb fan box</h1>
+										<p>$<span>30.00</span></p>
+										<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+									</div>
+								
+								</div>
+							</div>
+					</div>
+				</div>
+
+				<!-- Item 2 -->
+				<div class="box">
+					<div class="slide-img">
+						<img src=https://teecandal.com/wp-content/uploads/2021/01/redirect01072021000157-10.jpg" alt="2" class="img"/>
+							<div class="overlay">	
+								<div class="itemInfo">
+									<div class="type">
+										<h1>Hololive En Merch Origins T Shirt Hoodie Sweatshirt</h1>
+										<p>$<span>44.99</span></p>
+										<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+									</div>
+								
+								</div>
+							</div>
+					</div>
+				</div>
+
+				<!-- Item 3 -->
+				<div class="box">
+					<div class="slide-img">
+						<img src="https://ae01.alicdn.com/kf/U2354a716b28e47c9bdde74b4d4cfbd73U/Virtual-Youtuber-VTB-Sakura-Miko-Hololive-Tshirt-vtb-fan-box.jpg_q50.jpg" alt="3" class="img"/>
+							<div class="overlay">	
+								<div class="itemInfo">
+									<div class="type">
+										<h1>Virtual Youtuber VTB Sakura Miko Hololive Tshirt vtb fan box</h1>
+										<p>$<span>30.00</span></p>
+										<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+									</div>
+								
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Brand Box -->
+			<div class="itemsBox">
+				<div class="box">
+					<div class="slide-img">
+						<h1 class="title2">VivziePop</h1>
+						<img src="https://bloximages.chicago2.vip.townnews.com/iowastatedaily.com/content/tncms/assets/v3/editorial/8/1a/81aad4ca-dcb6-11ea-8a79-d3b901223fc4/5f34150563173.image.png?resize=1120%2C630" alt="vivziepop"  class="img"/>
+					</div>
+				</div>
+
+				<!-- Item 4 -->	
+				<div class="box">
+					<div class="slide-img">
+						<img src=https://cdn.shopify.com/s/files/1/0284/5558/products/Vivziepop-Veroski_sTourShirtLS_1024x1024.jpg?v=1613077279" alt="4" class="img"/>
+							<div class="overlay2">	
+								<div class="itemInfo">
+									<div class="type">
+										<h1>LONG SLEEVE Veroski's Tour Shirt *LIMITED RUN*</h1>
+										<p>$<span>34.95</span></p>
+										<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+									</div>
+								
+								</div>
+							</div>
+					</div>
+				</div>
+
+				<!-- Item 5 -->
+				<div class="box">
+					<div class="slide-img">
+						<img src="https://cdn.shopify.com/s/files/1/0284/5558/products/CuteVaggieCharlieLS_1024x1024.jpg?v=1605034608" alt="5" class="img"/>
+							<div class="overlay2">	
+								<div class="itemInfo">
+									<div class="type">
+										<h1>LONG SLEEVE SHIRT CUTE Vaggie and Charlie *LIMITED RUN*</h1>
+										<p>$<span>29.95</span></p>
+										<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+									</div>
+								
+								</div>
+							</div>
+					</div>
+				</div>
+
+				<!-- Item 6 -->
+				<div class="box">
+					<div class="slide-img">
+						<img src="https://cdn.shopify.com/s/files/1/0284/5558/products/Vivziepop-StolasLullabyLS_large.jpg?v=1612978334" alt="6" class="img"/>
+							<div class="overlay2">	
+								<div class="itemInfo">
+									<div class="type">
+										<h1>LONG SLEEVE Stolas's Lullaby W/SLEEVES *LIMITED RUN*</h1>
+										<p>$<span>34.95</span></p>
+										<a href="#" title="add to cart" class="attToCart">Add to cart</a>
+									</div>
+								
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Data -->
+			<div class="cartBox">
+				<div class="cart">
+					<i class="fa fa-close"></i>
+					<h1>Your Cart</h1>
+					<table></table>
+					<a href="cart.html" class="view">My Cart</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Script -->
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>

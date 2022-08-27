@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Akihabara-ten - Order</title>
+
+        <!-- Icon, CSS, Bootstrap -->
+        <link rel="shortcut icon" href="assets/images/logo.png">
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+        <!-- Data JS -->
+        <script>
+            function Delete(e){
+                let items = [];
+                JSON.parse(localStorage.getItem('items')).map(data=>{
+                    if(data.id != e.parentElement.parentElement.children[0].textContent){    
+                        items.push(data);
+                    }
+                });
+                localStorage.setItem('items',JSON.stringify(items));
+                window.location.reload();
+            };
+        </script>
+    </head>
+    <body>
+        <div class="main">
+
+            <!-- Header -->
+            <header id="header" class="header">
+                <a href="index.html">秋葉原店</a>
+                <div><i></i></div>
+                <div class="hide">
+                    <div class="iconShopping">
+                        <p>0</p>
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- User Form -->
+            <div class="form-wrap">
+                <form name="ShoppingList">   
+                    <h1 class="shopping">User Details</h1>
+                    <input type="text" placeholder="Name" id="name">
+                    <input type="number" placeholder="Phone Number" id="phone">
+                    <input type="email" placeholder="Email" id="email">
+                    <textarea placeholder="Billing Address" id="billing"></textarea>
+                    <textarea placeholder="Shipping Address" id="shipping"></textarea>
+                    <a href="order.html"><input type="button" value="Submit" onclick="SaveItem()"></a>
+                </form>
+            </div>
+
+            <!-- Return Btn -->
+            <a href="cart.html" class="view3">Return to My Cart</a>
+            
+            <!-- Data -->
+            <div class="cartBox">
+                <div class="cart">
+                    <i class="fa fa-close"></i>
+                    <h1>Your Cart</h1>
+                    <table></table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script -->
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
